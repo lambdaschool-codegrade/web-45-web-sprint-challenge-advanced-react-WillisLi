@@ -1,1 +1,9 @@
-// write your custom hook here to control your checkout form
+import useLocalStorage from './useLocaleStorage';
+
+const useForm = (initialValues) => {
+    const [values, setValues] = useLocalStorage("form", initialValues);
+
+    return [values, setValues];
+}
+
+export default useForm;
